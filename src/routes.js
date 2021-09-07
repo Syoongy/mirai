@@ -12,7 +12,11 @@ export default createRouter({
     },
     {
       path: '/about-us',
-      component: () => import('./pages/about/about-us-page.vue' /* webpackChunkName: "about-us-page" */)
+      component: () => import('./pages/about/about-us-page.vue' /* webpackChunkName: "about" */)
+    },
+    {
+      path: '/search',
+      component: () => import('./pages/search/search-page.vue' /* webpackChunkName: "search" */)
     }
   ]
 });
