@@ -35,6 +35,5 @@ async function tauriRequestResolver({ method, url, data, headers }) {
 }
 
 if (import.meta.env.VITE_HTTP_HANDLER === "NATIVE") {
-  console.log(YNetwork);
   YNetwork.setRequestRunner(tauriRequestResolver);
 }
