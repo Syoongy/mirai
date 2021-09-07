@@ -3,8 +3,8 @@ import NavItem from "./NavItem.vue";
 import { CollectionIcon, SearchIcon } from "@heroicons/vue/solid";
 </script>
 <template>
-  <div class="min-h-screen flex flex-row bg-gray-100">
-    <div class="flex flex-col w-56 bg-white rounded-r-3xl overflow-hidden">
+  <div class="min-h-screen flex flex-row bg-gray-100 shadow-md">
+    <div class="flex flex-col w-full bg-white rounded-r-3xl overflow-hidden">
       <div class="flex items-center justify-center h-20 shadow-md">
         <h1 class="text-3xl uppercase text-indigo-500">Logo</h1>
       </div>

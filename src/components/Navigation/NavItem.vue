@@ -5,9 +5,11 @@
       class="
         flex flex-row
         items-center
+        justify-center
         h-12
+        my-2
         transform
-        hover:translate-x-2
+        hover:-translate-y-2
         transition-transform
         ease-in
         duration-200
