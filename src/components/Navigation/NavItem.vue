@@ -1,11 +1,10 @@
 <template>
-  <li>
+  <li class="">
     <router-link
       :to="to"
       class="
         flex flex-row
         items-center
-        justify-center
         h-12
         my-2
         transform
@@ -15,10 +14,11 @@
         duration-200
         text-gray-500
         hover:text-gray-800
+        px-6
       "
     >
       <slot></slot>
-      <span class="text-sm font-medium">{{ navName }}</span>
+      <span class="text-sm font-medium ml-6">{{ navName }}</span>
       <span
         class="
           ml-auto
