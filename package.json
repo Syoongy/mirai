@@ -21,17 +21,17 @@
     "@headlessui/vue": "^1.4.1",
     "@heroicons/vue": "^1.0.4",
     "@tauri-apps/api": "1.0.0-beta.8",
-    "vue": "^3.2.11",
+    "vue": "^3.2.19",
     "vue-router": "4.0.11",
     "ynetwork": "3.0.5"
   },
   "devDependencies": {
     "@tauri-apps/cli": "1.0.0-beta.10",
-    "@vitejs/plugin-vue": "^1.6.2",
-    "@vue/compiler-sfc": "^3.2.11",
-    "autoprefixer": "^10.3.4",
+    "@vitejs/plugin-vue": "^1.9.2",
+    "@vue/compiler-sfc": "^3.2.19",
+    "autoprefixer": "^10.3.6",
     "cross-env": "^7.0.3",
-    "postcss": "^8.3.6",
+    "postcss": "^8.3.8",
     "tailwindcss": "^2.2.15",
     "vite": "2.5.6"
   },
