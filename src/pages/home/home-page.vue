@@ -2,12 +2,15 @@
 import { ref } from "vue";
 import { useAuthorisationApi } from "../../api/anilistAPI";
 import { shell } from "@tauri-apps/api";
+import { Store } from "tauri-plugin-store-api";
 
 const authCode = ref("");
+const retData = ref({});
 const { getAuthorisationToken } = useAuthorisationApi(authCode);
 const login = async () => {
   const resData = await getAuthorisationToken();
   console.log(resData);
+  retData.value = resData;
 };
 const getAccessCode = async () => {
   await shell.open(
@@ -38,6 +41,7 @@ const getAccessCode = async () => {
       >
         Submit
       </button>
+      <p class="text-white">returned data: {{ retData }}</p>
     </div>
   </div>
 </template>

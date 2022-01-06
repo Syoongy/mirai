@@ -1,4 +1,4 @@
-import { YNetwork } from "ynetwork";
+import ky from "ky";
 
 const useAuthorisationApi = (accessToken) => {
   const getAuthorisationToken = async () => {
@@ -9,18 +9,16 @@ const useAuthorisationApi = (accessToken) => {
           id
         }
       }`;
-      const res = await YNetwork.post(
-        "https://graphql.anilist.co",
-        {
-          query: query,
-        },
-        {
-          Authorization: "Bearer " + accessToken.value,
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        }
-      );
-      console.log(res);
+      const res = await ky
+        .post("https://graphql.anilist.co", {
+          body: JSON.stringify({ query }),
+          headers: {
+            Authorization: "Bearer " + accessToken.value,
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        })
+        .json();
       data = res;
     } catch (error) {
       const errMsg = await error.response.json();

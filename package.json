@@ -21,9 +21,10 @@
     "@headlessui/vue": "^1.4.2",
     "@heroicons/vue": "^1.0.5",
     "@tauri-apps/api": "1.0.0-beta.8",
+    "ky": "^0.28.7",
+    "tauri-plugin-store-api": "github:tauri-apps/tauri-plugin-store",
     "vue": "^3.2.26",
-    "vue-router": "4.0.12",
-    "ynetwork": "3.0.6"
+    "vue-router": "4.0.12"
   },
   "devDependencies": {
     "@tauri-apps/cli": "1.0.0-beta.10",
