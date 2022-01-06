@@ -6,7 +6,7 @@ async function tauriRequestResolver({ method, url, data, headers }) {
     const response = await http.fetch(url, {
       url,
       method: method.toUpperCase(),
-      body: data,
+      body: JSON.stringify(data),
       headers,
       responseType: 2,
     });
