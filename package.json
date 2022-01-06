@@ -18,22 +18,22 @@
     "build": "cross-env VITE_HTTP_HANDLER=NATIVE vite build && tauri build"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.4.1",
-    "@heroicons/vue": "^1.0.4",
+    "@headlessui/vue": "^1.4.2",
+    "@heroicons/vue": "^1.0.5",
     "@tauri-apps/api": "1.0.0-beta.8",
-    "vue": "^3.2.19",
-    "vue-router": "4.0.11",
-    "ynetwork": "3.0.5"
+    "vue": "^3.2.26",
+    "vue-router": "4.0.12",
+    "ynetwork": "3.0.6"
   },
   "devDependencies": {
     "@tauri-apps/cli": "1.0.0-beta.10",
-    "@vitejs/plugin-vue": "^1.9.2",
-    "@vue/compiler-sfc": "^3.2.19",
-    "autoprefixer": "^10.3.6",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "@vue/compiler-sfc": "^3.2.26",
+    "autoprefixer": "^10.4.1",
     "cross-env": "^7.0.3",
-    "postcss": "^8.3.8",
-    "tailwindcss": "^2.2.15",
-    "vite": "2.5.6"
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.11",
+    "vite": "2.7.10"
   },
   "license": "ISC"
 }
