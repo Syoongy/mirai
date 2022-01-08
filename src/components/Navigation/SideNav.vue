@@ -13,6 +13,12 @@ const navArray = [
     icon: "SearchIcon",
   },
 ];
+const logout = () => {
+  localStorage.removeItem("jwtKey");
+  localStorage.removeItem("viewer-id");
+  localStorage.removeItem("viewer-name");
+  localStorage.removeItem("viewer-score-format");
+};
 </script>
 <template>
   <div class="min-h-screen flex flex-row">
@@ -29,15 +35,14 @@ const navArray = [
         >
           <dynamic-icon
             :name="item.icon"
-            class="
-              inline-flex
-              items-center
-              justify-center
-              h-8
-              w-8
-              text-lg text-gray-400
-            "
-          ></dynamic-icon>
+            class="inline-flex items-center justify-center h-8 w-8 text-lg text-gray-400"
+          />
+        </nav-item>
+        <nav-item :navName="'Logout'" @click="logout">
+          <dynamic-icon
+            :name="'LogoutIcon'"
+            class="inline-flex items-center justify-center h-8 w-8 text-lg text-gray-400"
+          />
         </nav-item>
       </ul>
     </div>

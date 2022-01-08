@@ -1,5 +1,5 @@
 <template>
-  <li class="">
+  <li>
     <router-link
       :to="to"
       class="
@@ -47,7 +47,6 @@ const props = defineProps({
   },
   to: {
     type: String,
-    required: true,
     default: "/",
   },
   noOfNotifications: {
