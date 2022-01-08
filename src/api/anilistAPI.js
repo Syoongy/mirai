@@ -1,17 +1,13 @@
 import ky from "ky";
+import { getViewerQuery } from "./queries/Viewer.js";
 
 const useAuthorisationApi = (accessToken) => {
   const getAuthorisationToken = async () => {
     let data = null;
     try {
-      const query = `query {
-        Viewer {
-          id
-        }
-      }`;
       const res = await ky
         .post("https://graphql.anilist.co", {
-          body: JSON.stringify({ query }),
+          body: JSON.stringify({ query: getViewerQuery }),
           headers: {
             Authorization: "Bearer " + accessToken.value,
             "Content-Type": "application/json",
