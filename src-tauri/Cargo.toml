@@ -12,12 +12,13 @@ build = "src/build.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
-tauri-build = { version = "1.0.0-rc.1", features = [] }
+tauri-build = { version = "1.0.0-rc.5", features = [] }
 
 [dependencies]
 serde_json = "1.0.79"
 serde = { version = "1.0.136", features = ["derive"] }
-tauri = { version = "1.0.0-rc.2", features = ["http-all", "shell-all"] }
+tauri = { version = "1.0.0-rc.6", features = ["http-all", "shell-all"] }
+window_titles = { git = "https://github.com/HiruNya/window_titles"}
 
 [features]
 default = [ "custom-protocol" ]

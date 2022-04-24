@@ -2,10 +2,12 @@
 import { ref } from "vue";
 import { useAuthorisationApi } from "../../api/anilistAPI";
 import { shell } from "@tauri-apps/api";
+import { invoke } from "@tauri-apps/api/tauri";
 
 const authCode = ref("");
 const retData = ref({});
 const mediaListData = ref({});
+const intervalTracker = ref({});
 const { getAuthorisationToken, getMediaList } = useAuthorisationApi(authCode);
 
 const login = async () => {
@@ -33,6 +35,16 @@ const getAnimeList = async () => {
   if (!err) {
     mediaListData.value = val;
   }
+};
+
+const startEnumerateWindows = async () => {
+  intervalTracker.value = setInterval(async () => {
+    await invoke("enumerate_windows");
+  }, 2000);
+};
+
+const endEnumerateWindows = () => {
+  clearInterval(intervalTracker.value);
 };
 </script>
 
@@ -66,6 +78,19 @@ const getAnimeList = async () => {
         Get List
       </button>
       <p class="text-white">returned data: {{ mediaListData }}</p>
+
+      <button
+        class="py-3 px-6 text-white rounded-lg bg-purple-600 shadow-lg block m-4"
+        @click="startEnumerateWindows"
+      >
+        start interval list windows
+      </button>
+      <button
+        class="py-3 px-6 text-white rounded-lg bg-purple-600 shadow-lg block m-4"
+        @click="endEnumerateWindows"
+      >
+        end interval list windows
+      </button>
     </div>
   </div>
 </template>
